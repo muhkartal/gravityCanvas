@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+    cursor: crosshair;
+    user-select: none;
+}
+
+#canvas {
+    display: block;
+    background: #000;
+    cursor: crosshair;
+    touch-action: none;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.ui {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.95);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 11px;
+    line-height: 1.4;
+    max-width: 180px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    transition: all 0.2s ease;
+}
+
+.ui h1 {
+    font-size: 14px;
+    margin-bottom: 8px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 6px;
+}
+
+button {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.8);
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: 400;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+button:focus {
+    outline: 2px solid rgba(255, 255, 255, 0.5);
+    outline-offset: 2px;
+}
+
+.info {
+    margin-top: 8px;
+    opacity: 0.8;
+    font-size: 9px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 6px;
+    border-radius: 4px;
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+
+@media (max-width: 768px) {
+    .ui {
+        top: 10px;
+        left: 10px;
+        padding: 10px;
+        font-size: 11px;
+    }
+    
+    .ui h1 {
+        font-size: 16px;
+    }
+    
+    button {
+        padding: 6px 8px;
+        font-size: 10px;
+    }
+}
+
+
+@media (prefers-contrast: high) {
+    .ui {
+        background: rgba(0, 0, 0, 0.8);
+        border: 2px solid white;
+    }
+    
+    button {
+        background: rgba(255, 255, 255, 0.8);
+        color: black;
+        border: 1px solid white;
+    }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    button {
+        transition: none;
+    }
+}
+
+
+@media print {
+    .ui {
+        display: none;
+    }
+}
