@@ -1,4 +1,4 @@
-# Gravity Canvas
+# gravityCanvas
 
 ![screenshot](images/gravityCanvas.png)
 
